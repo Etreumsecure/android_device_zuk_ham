@@ -67,5 +67,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.telephony.call_ring.multiple=0
 persist.camera.4k2k.enable=1
 
-# OTA Server URL
-cm.updater.uri=http://download.ambriel.net/cyanogenmod/api
+# Specific device info (Bliss building)
+ro.product.model=Z1
+ro.product.device=ham
+>>>>>>> daa78ee... Added "ro.product.device" and  "ro.product.model" to system.prop
