@@ -7,9 +7,9 @@
   },
   {
     "remote": "github",
-    "repository": "CyanogenMod/android_kernel_cyanogen_msm8974",
+    "repository": "BitOBSessiOn/android_kernel_cyanogen_msm8974",
     "target_path": "kernel/cyanogen/msm8974",
-    "revision": "cm-13.0"
+    "revision": "bito-k"
   },
   {
     "remote": "github",
