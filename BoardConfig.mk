@@ -218,6 +218,7 @@ BOARD_SEPOLICY_DIRS += \
 Bliss_Build_Block:=1
 
 # Blissful building options
+TARGET_OTA_ASSERT_DEVICE := ham,Z1 
 BLISSIFY := true
 BLISS_O3 := false
 BLISS_GRAPHITE := false
