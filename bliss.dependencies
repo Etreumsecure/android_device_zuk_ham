@@ -7,14 +7,14 @@
   },
   {
     "remote": "github",
-    "repository": "BitOBSessiOn/android_kernel_cyanogen_msm8974",
+    "repository": "BlissRoms-Kernels/android_kernel_cyanogen_msm8974",
     "target_path": "kernel/cyanogen/msm8974",
-    "revision": "bito-k"
+    "revision": "acuicultor"
   },
   {
     "remote": "github",
-    "repository": "TheMuppets/proprietary_vendor_zuk",
+    "repository": "Etreumsecure/proprietary_vendor_zuk",
     "target_path": "vendor/zuk",
-    "revision": "cm-13.0"
+    "revision": "mm6.0-bliss"
   }
 ]
