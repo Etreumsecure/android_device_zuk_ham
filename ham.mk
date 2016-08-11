@@ -21,6 +21,9 @@ endif
 # Set CM_BUILDTYPE
 CM_BUILDTYPE := NIGHTLY
 
+ADD_RADIO_FILES ?= true
+TARGET_RELEASETOOLS_EXTENSIONS := device/zuk/ham
+
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
@@ -86,6 +89,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
@@ -99,11 +106,11 @@ PRODUCT_PACKAGES += \
     gps.msm8974
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
-#    $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
 
 # Lights
 PRODUCT_PACKAGES += \

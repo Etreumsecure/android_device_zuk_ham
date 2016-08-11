@@ -48,7 +48,7 @@ TARGET_KERNEL_ARCH := arm
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=480M
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8974
 TARGET_KERNEL_CONFIG := cyanogenmod_k9_defconfig
-# TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Enable DIAG on debug builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -97,8 +97,9 @@ BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
 BOARD_OEMIMAGE_PARTITION_SIZE      := 133169152
 
 # GPS
-USE_DEVICE_SPECIFIC_LOC_API := true
+BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 USE_DEVICE_SPECIFIC_GPS := true
+USE_DEVICE_SPECIFIC_LOC_API := true
 
 # Graphics
 BOARD_EGL_CFG := device/zuk/ham/configs/egl.cfg
@@ -212,29 +213,3 @@ BOARD_SEPOLICY_DIRS += \
     device/zuk/ham/sepolicy
 
 -include vendor/zuk/ham/BoardConfigVendor.mk
-
-# Block_Build
-Bliss_Build_Block:=1
-
-# Blissful building options
-TARGET_OTA_ASSERT_DEVICE := ham,Z1 
-BLISSIFY := true
-BLISS_O3 := false
-BLISS_GRAPHITE := false
-BLISS_STRICT := false
-BLISS_KRAIT := true
-BLISS_PIPE := true
-#FLOOP_NEST_OPTIMIZE := true
-#ENABLE_GCCONLY := true
-#TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
-#FAST_MATH := true
-#ENABLE_MODULAR_O3 := true
-#ENABLE_LTO := true
-#LINK_TIME_OPTIMIZATIONS := true
-#TARGET_USE_ION_COMPAT := true
-#TARGET_USE_KRAIT_PLD_SET := true
-TARGET_TC_ROM := 4.9-linaro
-TARGET_TC_KERNEL := 6.0-sm
-TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-

@@ -3,7 +3,7 @@
 #
 ro.secure=0
 ro.adb.secure=0
-ro.sf.lcd_density=480
+ro.sf.lcd_density=400
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
@@ -67,6 +67,9 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.telephony.call_ring.multiple=0
 persist.camera.4k2k.enable=1
 
-# Specific device info (Bliss building)
-ro.product.model=Z1
-ro.product.device=ham
+# OTA Server URL
+cm.updater.uri=http://download.ambriel.net/cyanogenmod/api
+
+# Assertive Display
+ro.qcom.ad=1
+ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
